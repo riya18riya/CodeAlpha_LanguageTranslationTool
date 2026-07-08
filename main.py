@@ -23,23 +23,33 @@ language_codes = {
     "Chinese": "zh-CN"
 }
 def translate_text():
-    text=input_text.get("1.0",tk.END)
+    text = input_text.get("1.0",tk.END)
+
+    if text.strip() == "":
+        output_text.delete("1.0",tk.END)
+        output_text.insert(tk.END,"Please enter some text.")
+        return
     
-    source_language=source_combo.get()
-    target_language=target_combo.get()
+    try:
+        source_language=source_combo.get()
+        target_language=target_combo.get()
 
-    source_code = language_codes[source_language]
-    target_code = language_codes[target_language]
+        source_code = language_codes[source_language]
+        target_code = language_codes[target_language]
 
-    translator = GoogleTranslator(
-        source=source_code,
-        target=target_code
-    )
+        translator = GoogleTranslator(
+            source=source_code,
+            target=target_code
+        )
 
-    translated_text = translator.translate(text)
+        translated_text = translator.translate(text)
 
-    output_text.delete("1.0",tk.END)
-    output_text.insert(tk.END,translated_text)
+        output_text.delete("1.0",tk.END)
+        output_text.insert(tk.END,translated_text)
+
+    except Exception:
+        output_text.delete("1.0", tk.END)
+        output_text.insert(tk.END,"Translation failed.\nPlease check your internet connection.")    
 
 #create the main window
 window = tk.Tk()
