@@ -18,21 +18,25 @@ The **Language Translation Tool** is a desktop application developed using **Pyt
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/riya18riya/CodeAlpha_LanguageTranslationTool.git
 ```
 
 2. Navigate to the project folder:
+
 ```bash
 cd CodeAlpha_LanguageTranslationTool
 ```
 
 3. Install the required library:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Run the project:
+
 ```bash
 python main.py
 ```
@@ -44,16 +48,12 @@ CodeAlpha_LanguageTranslationTool/
 │── main.py
 │── README.md
 │── requirements.txt
-│── screenshot.png
+│── Screenshot 2026-07-23 124810.png
 ```
 
 ## 📷 Screenshot
 
-(Add a screenshot of your application here)
-
-```markdown
-![Language Translation Tool](screenshot.png)
-```
+![Language Translation Tool](Screenshot%202026-07-23%20124810.png)
 
 ## 👩‍💻 Author
 
@@ -62,4 +62,5 @@ CodeAlpha_LanguageTranslationTool/
 B.Tech CSE (AI)
 
 ### Internship
+
 **CodeAlpha Virtual Internship**
